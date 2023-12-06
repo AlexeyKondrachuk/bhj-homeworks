@@ -1,7 +1,7 @@
-let signin = document.getElementById("signin");
+const signin = document.getElementById("signin");
 signin.classList.add("signin_active");
 
-let signinForm = signin.querySelector("#signin__form");
+const signinForm = signin.querySelector("#signin__form");
 
 function clearForm() {
 	signinForm.querySelector(`[name="login"]`).value = "";
@@ -52,9 +52,7 @@ function showWelcome() {
 	clearForm();
 };
 
-signinForm.querySelector("#signin__btn");
-signinForm.addEventListener("click", signIN, false);
-signinForm.querySelector("#signout__btn");
-signinForm.addEventListener("click", signOUT, false);
+signinForm.querySelector("#signin__btn").addEventListener("click", signIN, false);
+signinForm.querySelector("#signout__btn").addEventListener("click", signOUT, false);
 
 showWelcome();
